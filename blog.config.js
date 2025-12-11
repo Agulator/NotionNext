@@ -17,7 +17,7 @@ const BLOG = {
 
   AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || '千之让', // 您的昵称 例如 tangly1024
   BIO: process.env.NEXT_PUBLIC_BIO || '可是啊，总有那风吹不散的认真。', // 作者简介
-  LINK: process.env.NEXT_PUBLIC_LINK || 'https://glj520.eu.org', // 网站地址
+  LINK: process.env.NEXT_PUBLIC_LINK || 'https://web.glj520.eu.org', // 网站地址
   KEYWORDS: process.env.NEXT_PUBLIC_KEYWORD || '千之让, 博客', // 网站关键词 英文逗号隔开
   BLOG_FAVICON: process.env.NEXT_PUBLIC_FAVICON || '/favicon.ico', // blog favicon 配置, 默认使用 /public/favicon.ico，支持在线图片，如 https://img.imesong.com/favicon.png
   BEI_AN: process.env.NEXT_PUBLIC_BEI_AN || '', // 备案号 闽ICP备XXXXXX
