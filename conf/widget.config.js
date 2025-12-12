@@ -37,18 +37,39 @@ module.exports = {
   MUSIC_PLAYER_AUDIO_LIST: [
     // 示例音乐列表。除了以下配置外，还可配置歌词，具体配置项看此文档 https://aplayer.js.org/#/zh-Hans/
     {
-      name: '风を共に舞う気持ち',
+      name: '陈小春-我不是伟人',
       artist: 'Falcom Sound Team jdk',
-      url: 'https://music.163.com/song/media/outer/url?id=731419.mp3',
-      cover:
-        'https://p2.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
-    },
-    {
-      name: '王都グランセル',
-      artist: 'Falcom Sound Team jdk',
-      url: 'https://music.163.com/song/media/outer/url?id=731355.mp3',
+      url: 'https://music.glj520.eu.org/%E9%99%88%E5%B0%8F%E6%98%A5-%E6%88%91%E4%B8%8D%E6%98%AF%E4%BC%9F%E4%BA%BA.mp3',
       cover:
         'https://p1.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
+    }
+    {
+      name: '经过(独唱版) - 陈楚生',
+      artist: 'Falcom Sound Team jdk',
+      url: 'https://music.glj520.eu.org/%E7%BB%8F%E8%BF%87(%E7%8B%AC%E5%94%B1%E7%89%88)%20-%20%E9%99%88%E6%A5%9A%E7%94%9F.mp3',
+      cover:
+        'https://p1.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
+    }
+    {
+      name: '葛漂亮-烟雨唱扬州(女版)',
+      artist: 'Falcom Sound Team jdk',
+      url: 'https://music.glj520.eu.org/%E8%91%9B%E6%BC%82%E4%BA%AE-%E7%83%9F%E9%9B%A8%E5%94%B1%E6%89%AC%E5%B7%9E(%E5%A5%B3%E7%89%88).mp3',
+      cover:
+        'https://p1.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
+    }
+    {
+      name: '你瞒我瞒 - 陈柏宇',
+      artist: 'Falcom Sound Team jdk',
+      url: 'https://music.glj520.eu.org/%E4%BD%A0%E7%9E%92%E6%88%91%E7%9E%92%20-%20%E9%99%88%E6%9F%8F%E5%AE%87.mp3',
+      cover:
+        'https://p1.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
+    },
+    {
+      name: 'Xun - 光年',
+      artist: 'Falcom Sound Team jdk',
+      url: 'https://music.glj520.eu.org/Xun%20-%20%E5%85%89%E5%B9%B4.mp3',
+      cover:
+        'https://p2.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
     }
   ],
   MUSIC_PLAYER_METING: process.env.NEXT_PUBLIC_MUSIC_PLAYER_METING || false, // 是否要开启 MetingJS，从平台获取歌单。会覆盖自定义的 MUSIC_PLAYER_AUDIO_LIST，更多配置信息：https://github.com/metowolf/MetingJS
