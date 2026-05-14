@@ -15,10 +15,10 @@ const BLOG = {
   APPEARANCE: process.env.NEXT_PUBLIC_APPEARANCE || 'light', // ['light', 'dark', 'auto'], // light 日间模式 ， dark夜间模式， auto根据时间和主题自动夜间模式
   APPEARANCE_DARK_TIME: process.env.NEXT_PUBLIC_APPEARANCE_DARK_TIME || [18, 6], // 夜间模式起至时间，false时关闭根据时间自动切换夜间模式
 
-  AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || 'NotionNext', // 您的昵称 例如 tangly1024
-  BIO: process.env.NEXT_PUBLIC_BIO || '一个普通的干饭人🍚', // 作者简介
+  AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || '千之让', // 您的昵称 例如 tangly1024
+  BIO: process.env.NEXT_PUBLIC_BIO || '可是啊，总有那风吹不散的认真。', // 作者简介
   LINK: process.env.NEXT_PUBLIC_LINK || 'https://tangly1024.com', // 网站地址
-  KEYWORDS: process.env.NEXT_PUBLIC_KEYWORD || 'Notion, 博客', // 网站关键词 英文逗号隔开
+  KEYWORDS: process.env.NEXT_PUBLIC_KEYWORD || '千之让, 博客', // 网站关键词 英文逗号隔开
   BLOG_FAVICON: process.env.NEXT_PUBLIC_FAVICON || '/favicon.ico', // blog favicon 配置, 默认使用 /public/favicon.ico，支持在线图片，如 https://img.imesong.com/favicon.png
   BEI_AN: process.env.NEXT_PUBLIC_BEI_AN || '', // 备案号 闽ICP备XXXXXX
   BEI_AN_LINK: process.env.NEXT_PUBLIC_BEI_AN_LINK || 'https://beian.miit.gov.cn/', // 备案查询链接，如果用了萌备等备案请在这里填写
@@ -26,6 +26,98 @@ const BLOG = {
 
   // RSS订阅
   ENABLE_RSS: process.env.NEXT_PUBLIC_ENABLE_RSS || true, // 是否开启RSS订阅功能
+// 音乐播放插件
+  MUSIC_PLAYER: process.env.NEXT_PUBLIC_MUSIC_PLAYER || true, // 是否使用音乐播放插件
+  MUSIC_PLAYER_VISIBLE: process.env.NEXT_PUBLIC_MUSIC_PLAYER_VISIBLE || true, // 是否在左下角显示播放和切换，如果使用播放器，打开自动播放再隐藏，就会以类似背景音乐的方式播放，无法取消和暂停
+  MUSIC_PLAYER_AUTO_PLAY: process.env.NEXT_PUBLIC_MUSIC_PLAYER_AUTO_PLAY || true, // 是否自动播放，不过自动播放时常不生效（移动设备不支持自动播放）
+  MUSIC_PLAYER_SHOW_LRC: process.env.NEXT_PUBLIC_MUSIC_PLAYER_SHOW_LRC || false, // 是否展示歌词（前提是有配置歌词路径，对 meting 无效）
+  MUSIC_PLAYER_ORDER: 'list', // 默认播放方式，顺序 list，随机 random
+  MUSIC_PLAYER_AUDIO_LIST: [ // 示例音乐列表。除了以下配置外，还可配置歌词，具体配置项看此文档 https://aplayer.js.org/#/zh-Hans/
+    {
+      name: '胡广生 - 任素汐',
+      artist: '千之让的收藏',
+      url: 'https://music.glj520.eu.org/%E4%BB%BB%E7%B4%A0%E6%B1%90-%E8%83%A1%E5%B9%BF%E7%94%9F.mp3',
+      cover: 'https://p2.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
+    },
+    {
+      name: '三百六十五里路 - 岩贵',
+      artist: '千之让的收藏',
+      url: 'https://music.glj520.eu.org/%E4%B8%89%E7%99%BE%E5%85%AD%E5%8D%81%E4%BA%94%E9%87%8C%E8%B7%AF-%E5%B2%A9%E8%B4%B5-305049053-320.mp3',
+      cover: 'https://p1.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
+    },
+    {
+      name: '你瞒我瞒 - 陈柏宇',
+      artist: '千之让的收藏',
+      url: 'https://music.glj520.eu.org/%E4%BD%A0%E7%9E%92%E6%88%91%E7%9E%92%20-%20%E9%99%88%E6%9F%8F%E5%AE%87.mp3',
+      cover: 'https://p1.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
+    },
+    {
+      name: '嘉宾(粤语) - 张远',
+      artist: '千之让的收藏',
+      url: 'https://music.glj520.eu.org/%E5%BC%A0%E8%BF%9C-%E5%98%89%E5%AE%BE(%E7%B2%A4%E8%AF%AD%E7%89%88).mp3',
+      cover: 'https://p1.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
+    },
+    {
+      name: '哎呦我的姑娘 - 抠抠',
+      artist: '千之让的收藏',
+      url: 'https://music.glj520.eu.org/%E6%8A%A0%E6%8A%A0-%E5%93%8E%E5%91%A6%E6%88%91%E7%9A%84%E5%A7%91%E5%A8%98.mp3',
+      cover: 'https://p1.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
+    },
+    {
+      name: '经过 - 陈楚生',
+      artist: '千之让的收藏',
+      url: 'https://music.glj520.eu.org/%E7%BB%8F%E8%BF%87(%E7%8B%AC%E5%94%B1%E7%89%88)%20-%20%E9%99%88%E6%A5%9A%E7%94%9F.mp3',
+      cover: 'https://p1.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
+    },
+    {
+      name: '烟雨唱扬州 - 葛漂亮',
+      artist: '千之让的收藏',
+      url: 'https://music.glj520.eu.org/%E8%91%9B%E6%BC%82%E4%BA%AE-%E7%83%9F%E9%9B%A8%E5%94%B1%E6%89%AC%E5%B7%9E(%E5%A5%B3%E7%89%88).mp3',
+      cover: 'https://p1.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
+    },
+    {
+      name: '我不是伟人 - 陈小春',
+      artist: '千之让的收藏',
+      url: 'https://music.glj520.eu.org/%E9%99%88%E5%B0%8F%E6%98%A5-%E6%88%91%E4%B8%8D%E6%98%AF%E4%BC%9F%E4%BA%BA.mp3',
+      cover: 'https://p1.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
+    },
+    {
+      name: '漂洋过海来看你 - 邰正宵',
+      artist: '千之让的收藏',
+      url: 'https://music.glj520.eu.org/%E6%BC%82%E6%B4%8B%E8%BF%87%E6%B5%B7%E6%9D%A5%E7%9C%8B%E4%BD%A0.mp3',
+      cover: 'https://p1.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
+    },
+    {
+      name: '春风十里 - 冯提莫',
+      artist: '千之让的收藏',
+      url: 'https://music.glj520.eu.org/%E5%86%AF%E6%8F%90%E8%8E%AB%20-%20%E6%98%A5%E9%A3%8E%E5%8D%81%E9%87%8C.mp3',
+      cover: 'https://p1.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
+    },
+    {
+      name: '富士山下 - 陈奕迅',
+      artist: '千之让的收藏',
+      url: 'https://music.glj520.eu.org/%E9%99%88%E5%A5%95%E8%BF%85%20-%20%E5%AF%8C%E5%A3%AB%E5%B1%B1%E4%B8%8B.mp3',
+      cover: 'https://p1.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
+    },
+    {
+      name: '恋曲1990 - 孙露',
+      artist: '千之让的收藏',
+      url: 'https://music.glj520.eu.org/%E5%AD%99%E9%9C%B2-%E6%81%8B%E6%9B%B21990.mp3',
+      cover: 'https://p1.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
+    },
+    {
+      name: '真爱来敲门 - 蔡仁皓',
+      artist: '千之让的收藏',
+      url: 'https://music.glj520.eu.org/%E8%94%A1%E4%BB%81%E7%9A%93%20-%20%E7%9C%9F%E7%88%B1%E6%9D%A5%E6%95%B2%E9%97%A8.mp3',
+      cover: 'https://p1.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
+    },    {
+      name: 'Susan说 - 陶喆',
+      artist: '千之让的收藏',
+      url: 'https://music.glj520.eu.org/%E9%99%B6%E5%96%86-Susan%E8%AF%B4.mp3',
+      cover: 'https://p1.music.126.net/kn6ugISTonvqJh3LHLaPtQ==/599233837187278.jpg'
+    },
+
+  ],
 
   // 其它复杂配置
   // 原配置文件过长，且并非所有人都会用到，故此将配置拆分到/conf/目录下, 按需找到对应文件并修改即可
